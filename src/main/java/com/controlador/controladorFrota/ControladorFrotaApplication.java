@@ -1,0 +1,13 @@
+package com.controlador.controladorFrota;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ControladorFrotaApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ControladorFrotaApplication.class, args);
+	}
+
+}
