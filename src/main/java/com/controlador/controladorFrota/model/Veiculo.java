@@ -1,18 +1,19 @@
 package com.controlador.controladorFrota.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.Data;
+import jakarta.persistence.*;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@AllArgsConstructor  // Adiciona um construtor com todos os atributos
+@NoArgsConstructor   // Adiciona um construtor sem argumentos (obrigatório para JPA)
 @Entity
 @Table(name = "tb_veiculo")
 public class Veiculo {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String placa;
-    //Motorista motorista;
     String modeloMarca;
-    //Viagem viagem;
+    String teste;
 }

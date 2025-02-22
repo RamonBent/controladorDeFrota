@@ -11,6 +11,9 @@ import lombok.Data;
 public class Viagem {
     @Id
     Long id;
+    String teste;
+    String nome;
+
 //    Dispesas dispesas;
 //    Motorista motorista;
 //    Veiculo veiculo;
