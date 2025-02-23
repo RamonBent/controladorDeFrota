@@ -18,6 +18,7 @@ public class VeiculoController {
     @Autowired
     private VeiculoService veiculoService;
 
+//     Nesse caso, não ta sendo usado o filtro(DTO), observe que só muda a classe que vai ser listada
 //    @GetMapping
 //    public List<Veiculo> getAllVeiculos() {
 //        return veiculoService.getAllVeiculos();
@@ -31,6 +32,7 @@ public class VeiculoController {
 //    }
 
 
+    //Sendo listada com filtro DTO
     @GetMapping
     public List<VeiculoResponseDTO> getAllVeiculos() {
         return veiculoService.getAllVeiculos();
@@ -43,7 +45,8 @@ public class VeiculoController {
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build());
     }
 
-    @PostMapping //criando veiculo dessa forma na quesicao aparece tudo que esta em Veiculo
+    //criando veiculo dessa forma na quesicao aparece tudo que esta em Veiculo sem filtro DTO
+    @PostMapping
     public ResponseEntity<Veiculo> createVeiculo(@RequestBody Veiculo veiculo) {
         Veiculo createdVeiculo = veiculoService.createVeiculo(veiculo);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdVeiculo);
