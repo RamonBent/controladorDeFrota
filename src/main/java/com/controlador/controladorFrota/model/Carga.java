@@ -1,8 +1,6 @@
 package com.controlador.controladorFrota.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -12,6 +10,7 @@ import java.math.BigDecimal;
 @Table(name = "tb_carga")
 public class Carga {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
     String origem;
     String destino;

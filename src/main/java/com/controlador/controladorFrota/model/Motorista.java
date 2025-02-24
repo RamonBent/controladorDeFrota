@@ -13,5 +13,5 @@ public class Motorista {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String nome;
-//    LocalDateTime dataNasc;
+    LocalDateTime dataNasc;
 }

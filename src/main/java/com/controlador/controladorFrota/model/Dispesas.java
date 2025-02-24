@@ -16,6 +16,5 @@ public class Dispesas {
     Long id;
     BigDecimal combustivel;
     BigDecimal manutencao;
-    BigDecimal alimentacao;
     BigDecimal outros;
 }
