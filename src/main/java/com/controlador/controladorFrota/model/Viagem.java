@@ -1,8 +1,6 @@
 package com.controlador.controladorFrota.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -11,10 +9,17 @@ import lombok.Data;
 public class Viagem {
     @Id
     Long id;
-    String teste;
+    //String teste;
     String nome;
+
+    @OneToOne //Uma carga só pode ter uma viagemó
+    @JoinColumn(name = "carga_id",referencedColumnName = "id")
+    Carga carga;
 
 //    Dispesas dispesas;
 //    Motorista motorista;
-//    Veiculo veiculo;
+
+    @ManyToOne //Um veiculo pode ter varias viagens
+    @JoinColumn(name = "placa_id",referencedColumnName = "id")
+    Veiculo veiculo;
 }
