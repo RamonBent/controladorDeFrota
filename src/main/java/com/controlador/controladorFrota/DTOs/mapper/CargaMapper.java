@@ -13,7 +13,8 @@ public class CargaMapper {
         carga.setDistancia(requestDTO.getDistancia());
         carga.setDestino(requestDTO.getDestino());
         carga.setOrigem(requestDTO.getOrigem());
-        carga.setValorTonlada(requestDTO.getValorTonlada());
+        carga.setTonelada(requestDTO.getTonelada());
+        carga.setValorTonelada(requestDTO.getValorTonelada());
         return carga;
     }
 }

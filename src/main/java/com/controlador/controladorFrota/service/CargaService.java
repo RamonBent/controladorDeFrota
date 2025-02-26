@@ -19,4 +19,10 @@ public class CargaService {
         Carga carga = cargaMapper.toEntity(cargaRequestDTO);
         return cargaRepository.save(carga);
     }
+
+    //excluir
+
+    //buscar
+
+    //editar
 }

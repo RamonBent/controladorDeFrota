@@ -11,5 +11,5 @@ public class CargaRequestDTO {
     String destino;
     int distancia;
     int tonelada;
-    BigDecimal valorTonlada;
+    BigDecimal valorTonelada;
 }

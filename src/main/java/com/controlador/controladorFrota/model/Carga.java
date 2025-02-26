@@ -16,5 +16,5 @@ public class Carga {
     String destino;
     int distancia;
     int tonelada;
-    BigDecimal valorTonlada;
+    BigDecimal valorTonelada;
 }
