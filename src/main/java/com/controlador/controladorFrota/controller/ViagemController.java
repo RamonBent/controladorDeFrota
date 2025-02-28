@@ -1,5 +1,6 @@
 package com.controlador.controladorFrota.controller;
 
+import com.controlador.controladorFrota.DTOs.request.ViagemRequestDTO;
 import com.controlador.controladorFrota.model.Viagem;
 import com.controlador.controladorFrota.service.ViagemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +18,8 @@ public class ViagemController {
     private ViagemService viagemService;
 
     @PostMapping
-    public ResponseEntity <Viagem> salvarViagem(@RequestBody Viagem viagem){
-        Viagem viagemSalva = viagemService.salvarviagem(viagem);
+    public ResponseEntity <Viagem> salvarViagem(@RequestBody ViagemRequestDTO viagemRequestDTO){
+        Viagem viagemSalva = viagemService.salvarViagemm(viagemRequestDTO);
 
         return new ResponseEntity<>(viagemSalva, HttpStatus.CREATED);
     }

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/caega")
+@RequestMapping("/carga")
 public class CargaController {
 
     @Autowired
@@ -32,11 +32,4 @@ public class CargaController {
         return ResponseEntity.status(HttpStatus.CREATED).body(criaCarga);
     }
 
-    @PostMapping("/Cria")
-    public ResponseEntity<Motorista> criaMotorista (@RequestBody MotoristaRequestDTO motoristaRequestDTO){
-        System.out.println("DTO recebido: " + motoristaRequestDTO);
-        Motorista motorista = motoristaService.salvaMotorista(motoristaRequestDTO);
-        System.out.println("Motorista antes de salvar: " + motorista);
-        return ResponseEntity.status(HttpStatus.CREATED).body(motorista);
-    }
 }
