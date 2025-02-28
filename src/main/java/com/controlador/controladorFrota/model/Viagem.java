@@ -8,18 +8,22 @@ import lombok.Data;
 @Table(name = "tb_viagem")
 public class Viagem {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    //String teste;
     String nome;
 
     @OneToOne //Uma carga só pode ter uma viagemó
     @JoinColumn(name = "carga_id",referencedColumnName = "id")
     Carga carga;
 
-//    Dispesas dispesas;
-//    Motorista motorista;
-
     @ManyToOne //Um veiculo pode ter varias viagens
     @JoinColumn(name = "placa_id",referencedColumnName = "id")
     Veiculo veiculo;
+
+    @ManyToOne
+    @JoinColumn(name = "motorista_id", referencedColumnName = "id")
+    Motorista motorista;
+
+    //    Dispesas dispesas;
+//    Motorista motorista;
 }
