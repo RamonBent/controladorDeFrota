@@ -25,5 +25,7 @@ public class Viagem {
     @JoinColumn(name = "motorista_id", referencedColumnName = "id")
     Motorista motorista;
 
-    //    Dispesas dispesas;
+    @OneToOne
+    @JoinColumn(name = "despesas_id", referencedColumnName = "id")
+    Despesas despesas;
 }

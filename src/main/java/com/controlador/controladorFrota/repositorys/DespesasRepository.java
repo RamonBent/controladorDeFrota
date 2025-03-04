@@ -1,9 +1,9 @@
 package com.controlador.controladorFrota.repositorys;
 
-import com.controlador.controladorFrota.model.Dispesas;
+import com.controlador.controladorFrota.model.Despesas;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface DispesasRepository extends JpaRepository<Dispesas, Long> {
+public interface DespesasRepository extends JpaRepository<Despesas, Long> {
 }
