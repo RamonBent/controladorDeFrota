@@ -1,13 +1,7 @@
 package com.controlador.controladorFrota.DTOs.request;
 
-import com.controlador.controladorFrota.model.Carga;
-import com.controlador.controladorFrota.model.Motorista;
-import com.controlador.controladorFrota.model.Veiculo;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-
-import java.util.List;
 
 @Data
 public class ViagemRequestDTO {

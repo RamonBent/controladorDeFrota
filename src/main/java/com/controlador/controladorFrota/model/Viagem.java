@@ -11,6 +11,7 @@ public class Viagem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+
     String nome;
 
     @OneToOne //Uma carga só pode ter uma viagemó
@@ -26,5 +27,4 @@ public class Viagem {
     Motorista motorista;
 
     //    Dispesas dispesas;
-//    Motorista motorista;
 }
