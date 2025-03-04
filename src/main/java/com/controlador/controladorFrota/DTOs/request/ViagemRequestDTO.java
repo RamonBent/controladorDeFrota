@@ -14,4 +14,7 @@ public class ViagemRequestDTO {
 
     @JsonProperty("motoristaId")
     private Long motoristaId;
+
+    @JsonProperty("despesasID")
+    private Long DespesasId;
 }

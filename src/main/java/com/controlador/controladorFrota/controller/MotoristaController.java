@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/Motorista")
+@RequestMapping("/motorista")
 public class MotoristaController {
     @Autowired
     MotoristaService motoristaService;
 
-    @PostMapping("/Cria")
+    @PostMapping("/cria")
     public ResponseEntity<Motorista> criaMotorista (@RequestBody MotoristaRequestDTO motoristaRequestDTO){
         Motorista motorista = motoristaService.salvaMotorista(motoristaRequestDTO);
         return ResponseEntity.status(HttpStatus.CREATED).body(motorista);
