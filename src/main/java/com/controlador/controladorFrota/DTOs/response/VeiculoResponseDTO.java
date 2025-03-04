@@ -1,6 +1,5 @@
 package com.controlador.controladorFrota.DTOs.response;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data

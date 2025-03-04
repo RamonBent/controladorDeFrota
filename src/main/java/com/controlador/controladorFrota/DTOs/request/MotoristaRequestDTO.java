@@ -1,6 +1,5 @@
 package com.controlador.controladorFrota.DTOs.request;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
