@@ -35,7 +35,7 @@ public class DespesasController {
     }
 
     @GetMapping("/detalha/{id}")
-    public ResponseEntity<Despesas> detalharMotorista(@PathVariable Long id) {
+    public ResponseEntity<Despesas> detalharDespesas(@PathVariable Long id) {
         return despesaService.detalharDespesas(id)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());

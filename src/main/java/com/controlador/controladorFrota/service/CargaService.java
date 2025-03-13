@@ -3,9 +3,14 @@ package com.controlador.controladorFrota.service;
 import com.controlador.controladorFrota.DTOs.mapper.CargaMapper;
 import com.controlador.controladorFrota.DTOs.request.CargaRequestDTO;
 import com.controlador.controladorFrota.model.Carga;
+import com.controlador.controladorFrota.model.Motorista;
 import com.controlador.controladorFrota.repositorys.CargaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CargaService {
@@ -20,9 +25,15 @@ public class CargaService {
         return cargaRepository.save(carga);
     }
 
-    //excluir
+    public void deleteCarga(Long id) {
+        cargaRepository.deleteById(id);
+    }
 
-    //buscar
+    public ResponseEntity<List<Carga>> listarCarga(){
+        return ResponseEntity.ok().body(cargaRepository.findAll());
+    }
 
-    //editar
+    public Optional<Carga> detalharCarga(Long id) {
+        return cargaRepository.findById(id);
+    }
 }

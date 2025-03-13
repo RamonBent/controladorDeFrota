@@ -11,10 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/carga")
@@ -23,13 +22,27 @@ public class CargaController {
     @Autowired
     private CargaService cargaService;
 
-    @Autowired
-    private MotoristaService motoristaService;
 
-    @PostMapping("cria-carga")
+    @PostMapping("cria")
     public ResponseEntity<Carga> criaCarga(@RequestBody CargaRequestDTO cargaRequestDTO){
         Carga criaCarga = cargaService.salvaCarga(cargaRequestDTO);
         return ResponseEntity.status(HttpStatus.CREATED).body(criaCarga);
     }
+    @DeleteMapping("/deleta")
+    public ResponseEntity<Void> deletarDespesa(@PathVariable Long id){
+        cargaService.deleteCarga(id); //Sem verificacao
+        return ResponseEntity.noContent().build();
+    }
 
+    @GetMapping("/lista")
+    public ResponseEntity<List<Carga>> listarDespesas(){
+        return cargaService.listarCarga();
+    }
+
+    @GetMapping("/detalhar/{id}")
+    public ResponseEntity<Carga> detalharDespesas(@PathVariable Long id) {
+        return cargaService.detalharCarga(id)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
 }
