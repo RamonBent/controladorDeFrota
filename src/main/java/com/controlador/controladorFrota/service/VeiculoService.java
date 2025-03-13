@@ -57,12 +57,17 @@ public class VeiculoService {
 
     // Criação do veículo a partir do DTO
     public Veiculo createVeiculoComDTO(VeiculoRequestDTO veiculoRequestDTO) {
-        Veiculo veiculo = new Veiculo();
 
-        //Isso tudo pode esta dentro de um mapper
-        veiculo.setPlaca(veiculoRequestDTO.getPlaca());
-        veiculo.setModeloMarca(veiculoRequestDTO.getModeloMarca());
-        //veiculo.setTeste(veiculoRequestDTO.getTeste());
+//        Veiculo veiculo = new Veiculo();
+//
+//        //Isso tudo pode esta dentro de um mapper
+//        veiculo.setPlaca(veiculoRequestDTO.getPlaca());
+//        veiculo.setModeloMarca(veiculoRequestDTO.getModeloMarca());
+//        //veiculo.setTeste(veiculoRequestDTO.getTeste());
+//        return veiculoRepository.save(veiculo);
+
+        //Usando o mapper
+        Veiculo veiculo = veiculoMapper.toEntity(veiculoRequestDTO);
         return veiculoRepository.save(veiculo);
     }
 
