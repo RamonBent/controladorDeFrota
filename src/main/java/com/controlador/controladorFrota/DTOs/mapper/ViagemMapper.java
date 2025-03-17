@@ -23,8 +23,6 @@ public class ViagemMapper {
     @Autowired
     DespesasRepository despesasRepository;
 
-
-
 //Forma abaixo foi encontrada para pode colocar apenas o id em outra tabela
     public Viagem toEntity(ViagemRequestDTO viagemRequestDTO){
         Viagem viagem = new Viagem();
