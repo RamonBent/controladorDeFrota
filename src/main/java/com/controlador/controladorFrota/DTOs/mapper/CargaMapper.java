@@ -18,4 +18,3 @@ public class CargaMapper {
         return carga;
     }
 }
-
