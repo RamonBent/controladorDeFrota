@@ -29,3 +29,5 @@ public class Viagem {
     @JoinColumn(name = "despesas_id", referencedColumnName = "id")
     Despesas despesas;
 }
+
+
