@@ -22,7 +22,7 @@ public class MotoristaController {
         return ResponseEntity.status(HttpStatus.CREATED).body(motorista);
     }
 
-    @DeleteMapping("/deleta")
+    @DeleteMapping("/deleta{id}")
     public ResponseEntity<Void> deletarMotorista(@PathVariable Long id){
         motoristaService.deleteMotorista(id); //Sem verificacao
         return ResponseEntity.noContent().build();

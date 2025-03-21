@@ -71,4 +71,10 @@ public class VeiculoController {
         veiculoService.deleteVeiculo(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/filtrar-por-modelo-marca")
+    public ResponseEntity<List<Veiculo>> filtrarPorModeloMarca(@RequestParam String modeloMarca) {
+        List<Veiculo> veiculos = veiculoService.filtrarPorModeloMarca(modeloMarca);
+        return ResponseEntity.ok(veiculos);
+    }
 }

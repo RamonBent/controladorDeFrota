@@ -28,7 +28,7 @@ public class CargaController {
         Carga criaCarga = cargaService.salvaCarga(cargaRequestDTO);
         return ResponseEntity.status(HttpStatus.CREATED).body(criaCarga);
     }
-    @DeleteMapping("/deleta")
+    @DeleteMapping("/deleta/{id}")
     public ResponseEntity<Void> deletarDespesa(@PathVariable Long id){
         cargaService.deleteCarga(id); //Sem verificacao
         return ResponseEntity.noContent().build();

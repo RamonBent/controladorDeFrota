@@ -83,4 +83,9 @@ public class VeiculoService {
     public void deleteVeiculo(Long id) {
         veiculoRepository.deleteById(id);
     }
+
+
+    public List<Veiculo> filtrarPorModeloMarca(String modeloMarca) {
+        return veiculoRepository.filtrarPorModeloMarca(modeloMarca);
+    }
 }
