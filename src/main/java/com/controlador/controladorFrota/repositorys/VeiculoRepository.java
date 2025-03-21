@@ -13,3 +13,4 @@ public interface VeiculoRepository extends JpaRepository <Veiculo, Long> {
     @Query("SELECT v FROM Veiculo v WHERE v.modeloMarca LIKE %:modeloMarca%")
     List<Veiculo> filtrarPorModeloMarca(@Param("modeloMarca") String modeloMarca);
 }
+
