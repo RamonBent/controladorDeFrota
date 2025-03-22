@@ -30,7 +30,6 @@ public class ViagemService {
         return viagemRepository.save(viagem);
     }
 
-
     public void deleteViagem(Long id) {
         viagemRepository.deleteById(id);
     }

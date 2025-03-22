@@ -26,11 +26,11 @@ public class ViagemMapper {
 //Forma abaixo foi encontrada para pode colocar apenas o id em outra tabela
     public Viagem toEntity(ViagemRequestDTO viagemRequestDTO){
         Viagem viagem = new Viagem();
+        viagem.setDescricao(viagemRequestDTO.getDescricao());
         Carga carga = cargaRepository.findById(viagemRequestDTO.getCargaId()).orElse(null);
         Veiculo veiculo = veiculoRepository.findById(viagemRequestDTO.getVeiculoId()).orElse(null);
         Motorista motorista = motoristaRepository.findById(viagemRequestDTO.getMotoristaId()).orElse(null);
         Despesas despesas = despesasRepository.findById(viagemRequestDTO.getDespesasId()).orElse(null);
-
 
         // Setar as entidades no transporte
         viagem.setCarga(carga);

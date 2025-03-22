@@ -2,12 +2,10 @@ package com.controlador.controladorFrota.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Past;
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+
 
 @Data
 @Entity
@@ -18,9 +16,8 @@ public class Motorista {
     Long id;
     String nome;
 
-
     @JsonFormat(pattern = "dd/MM/yyyy") // Formato desejado
-    LocalDateTime dataNasc;
+    LocalDate dataNasc;
 }
 
 

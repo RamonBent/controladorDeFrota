@@ -29,13 +29,13 @@ public class CargaController {
         return ResponseEntity.status(HttpStatus.CREATED).body(criaCarga);
     }
     @DeleteMapping("/deleta/{id}")
-    public ResponseEntity<Void> deletarDespesa(@PathVariable Long id){
+    public ResponseEntity<Void> deletaCarga(@PathVariable Long id){
         cargaService.deleteCarga(id); //Sem verificacao
         return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/lista")
-    public ResponseEntity<List<Carga>> listarDespesas(){
+    public ResponseEntity<List<Carga>> listarCarga(){
         return cargaService.listarCarga();
     }
 

@@ -5,7 +5,9 @@ import lombok.Data;
 
 @Data
 public class ViagemRequestDTO {
-    String nome;
+    @JsonProperty("descricao")
+    String descricao;
+
     @JsonProperty("cargaId")
     private Long cargaId; //Dessa forma aparece só o campo de id no swagger
 

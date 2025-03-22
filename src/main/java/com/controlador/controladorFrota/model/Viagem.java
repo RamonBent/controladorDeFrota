@@ -1,6 +1,7 @@
 package com.controlador.controladorFrota.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
@@ -11,21 +12,21 @@ public class Viagem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    String nome;
+    String descricao;
 
-    @OneToOne //Uma carga só pode ter uma viagemó
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true) // Configuração de cascata e remoção de órfãos
     @JoinColumn(name = "carga_id",referencedColumnName = "id")
     Carga carga;
 
     @ManyToOne //Um veiculo pode ter varias viagens
-    @JoinColumn(name = "placa_id",referencedColumnName = "id")
+    @JoinColumn(name = "placa_veiculo",referencedColumnName = "placa")
     Veiculo veiculo;
 
     @ManyToOne
     @JoinColumn(name = "motorista_id", referencedColumnName = "id")
     Motorista motorista;
 
-    @OneToOne
+    @OneToOne //uma despesa sóo pode ter uma viagem
     @JoinColumn(name = "despesas_id", referencedColumnName = "id")
     Despesas despesas;
 }

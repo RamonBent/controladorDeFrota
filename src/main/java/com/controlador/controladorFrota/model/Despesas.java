@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 @Table(name = "tb_despesas")
 public class Despesas {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     BigDecimal combustivel;
     BigDecimal manutencao;
