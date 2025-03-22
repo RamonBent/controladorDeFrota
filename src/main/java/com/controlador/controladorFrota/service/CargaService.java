@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,7 +23,19 @@ public class CargaService {
 
     public Carga salvaCarga(CargaRequestDTO cargaRequestDTO){
         Carga carga = cargaMapper.toEntity(cargaRequestDTO);
+
+        // Calcula o valor total do frete
+        BigDecimal valorTotalFrete = calcularValorTotalFrete(carga);
+        carga.setValorTotalFrete(valorTotalFrete);
+
         return cargaRepository.save(carga);
+    }
+
+    private BigDecimal calcularValorTotalFrete(Carga carga) {
+        if (carga.getValorTonelada() != null && carga.getTonelada() > 0) {
+            return carga.getValorTonelada().multiply(BigDecimal.valueOf(carga.getTonelada()));
+        }
+        return BigDecimal.ZERO;
     }
 
     public void deleteCarga(Long id) {

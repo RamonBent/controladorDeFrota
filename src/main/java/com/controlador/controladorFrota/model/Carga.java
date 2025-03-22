@@ -17,6 +17,7 @@ public class Carga {
     int distancia;
     int tonelada;
     BigDecimal valorTonelada;
+    BigDecimal ValorTotalFrete;
 
     @OneToOne(mappedBy = "carga", cascade = CascadeType.ALL, orphanRemoval = true) // bidirecional quando excluir carga, viagem tbm e excluida
     private Viagem viagem;
