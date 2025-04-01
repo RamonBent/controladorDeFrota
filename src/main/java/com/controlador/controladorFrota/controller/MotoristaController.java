@@ -2,6 +2,7 @@ package com.controlador.controladorFrota.controller;
 
 import com.controlador.controladorFrota.DTOs.request.MotoristaRequestDTO;
 import com.controlador.controladorFrota.model.Motorista;
+import com.controlador.controladorFrota.model.Veiculo;
 import com.controlador.controladorFrota.service.MotoristaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,8 +19,11 @@ public class MotoristaController {
 
     @PostMapping("/cria")
     public ResponseEntity<Motorista> criaMotorista (@RequestBody MotoristaRequestDTO motoristaRequestDTO){
-        Motorista motorista = motoristaService.salvaMotorista(motoristaRequestDTO);
-        return ResponseEntity.status(HttpStatus.CREATED).body(motorista);
+
+            Motorista motorista = motoristaService.salvaMotorista(motoristaRequestDTO);
+            return ResponseEntity.status(HttpStatus.CREATED).body(motorista);
+
+
     }
 
     @DeleteMapping("/deleta{id}")
@@ -38,5 +42,11 @@ public class MotoristaController {
         return motoristaService.detalharMotorista(id)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/filtrar-por-nome-motorista")
+    public ResponseEntity<List<Motorista>> filtrarPorModeloMarca(@RequestParam String nome) {
+        List<Motorista> motorista = motoristaService.filtrarPorNomeMotorista(nome);
+        return ResponseEntity.ok(motorista);
     }
 }
