@@ -9,4 +9,5 @@ public class DespesasRequestDTO {
     BigDecimal combustivel;
     BigDecimal manutencao;
     BigDecimal outros;
+    BigDecimal totalDespesas;
 }

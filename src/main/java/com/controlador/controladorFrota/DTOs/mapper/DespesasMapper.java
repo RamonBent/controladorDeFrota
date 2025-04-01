@@ -11,6 +11,7 @@ public class DespesasMapper {
         despesas.setCombustivel(despesasRequestDTO.getCombustivel());
         despesas.setManutencao(despesasRequestDTO.getManutencao());
         despesas.setOutros(despesasRequestDTO.getOutros());
+        despesas.setTotalDespesas(despesasRequestDTO.getTotalDespesas());
         return despesas;
     }
 

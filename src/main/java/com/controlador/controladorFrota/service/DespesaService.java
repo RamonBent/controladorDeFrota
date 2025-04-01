@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,6 +23,10 @@ public class DespesaService {
 
     public Despesas salvaDespesa(DespesasRequestDTO despesasRequestDTO){
         Despesas despesas = despesasMapper.toEntity(despesasRequestDTO);
+
+        BigDecimal despesaTotal = calculaDespesaTotal(despesasRequestDTO);
+        despesas.setTotalDespesas(despesaTotal);
+
         return despesasRepository.save(despesas);
     }
 
@@ -35,6 +40,15 @@ public class DespesaService {
 
     public Optional<Despesas> detalharDespesas(Long id) {
         return despesasRepository.findById(id);
+    }
+
+    private BigDecimal calculaDespesaTotal (DespesasRequestDTO despesasRequestDTO){
+        BigDecimal totalDespesa = BigDecimal.ZERO;
+        //Se alguma despesa estiver null retorna nullexcepition
+        totalDespesa = totalDespesa.add(despesasRequestDTO.getCombustivel())
+                .add(despesasRequestDTO.getManutencao())
+                .add(despesasRequestDTO.getOutros());
+        return totalDespesa;
     }
 
 }
