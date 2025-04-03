@@ -13,4 +13,7 @@ import java.util.List;
 public interface CargaRepository extends JpaRepository <Carga,Long> {
     @Query("SELECT v FROM Carga v WHERE v.destino LIKE %:destino%")
     List<Carga> filtrarPorDestino(@Param("destino") String destino);
+
+    @Query("SELECT v FROM Carga v WHERE v.origem LIKE %:origem%")
+    List<Carga> filtrarPorOrigem(@Param("origem") String origem);
 }

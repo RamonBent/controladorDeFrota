@@ -53,4 +53,8 @@ public class CargaService {
     public List<Carga> filtrarPorDestino(String destino) {
         return cargaRepository.filtrarPorDestino(destino);
     }
+
+    public List<Carga> filtrarPorOrigem(String origem) {
+        return cargaRepository.filtrarPorOrigem(origem);
+    }
 }

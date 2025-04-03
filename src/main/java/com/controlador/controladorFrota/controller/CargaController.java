@@ -51,4 +51,10 @@ public class CargaController {
         List<Carga> carga = cargaService.filtrarPorDestino(destino);
         return ResponseEntity.ok(carga);
     }
+
+    @GetMapping("/filtrar-por-origem")
+    public ResponseEntity<List<Carga>> filtrarPorOrigem(@RequestParam String origem) {
+        List<Carga> carga = cargaService.filtrarPorOrigem(origem);
+        return ResponseEntity.ok(carga);
+    }
 }
