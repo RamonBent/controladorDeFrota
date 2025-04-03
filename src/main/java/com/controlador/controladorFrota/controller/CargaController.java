@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
@@ -57,4 +58,15 @@ public class CargaController {
         List<Carga> carga = cargaService.filtrarPorOrigem(origem);
         return ResponseEntity.ok(carga);
     }
+
+//    public ResponseEntity<List<Carga>> filtraPorValor(@RequestParam BigDecimal valor) {
+//        List<Carga> cargas = cargaService.buscarCargasComFreteAcimaDe(valor);
+//
+////        if (cargas.isEmpty()) {
+////            return ResponseEntity.noContent().build();
+////        }
+//
+//        return ResponseEntity.ok(cargas);
+//
+//    }
 }

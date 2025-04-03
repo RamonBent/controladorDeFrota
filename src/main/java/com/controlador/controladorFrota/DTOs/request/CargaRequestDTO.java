@@ -12,4 +12,8 @@ public class CargaRequestDTO {
     int distancia;
     int tonelada;
     BigDecimal valorTonelada;
+
+    public BigDecimal getValorTonelada() {
+        return valorTonelada;
+    }
 }

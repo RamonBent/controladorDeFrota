@@ -57,4 +57,8 @@ public class CargaService {
     public List<Carga> filtrarPorOrigem(String origem) {
         return cargaRepository.filtrarPorOrigem(origem);
     }
+
+//    public List<Carga> buscarCargasComFreteAcimaDe(BigDecimal valorMinimo) {
+//        return cargaRepository.findByValorTotalFreteMaiorQue(valorMinimo);
+//    }
 }

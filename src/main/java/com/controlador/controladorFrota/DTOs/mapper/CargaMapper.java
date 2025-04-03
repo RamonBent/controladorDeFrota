@@ -15,6 +15,7 @@ public class CargaMapper {
         carga.setOrigem(requestDTO.getOrigem());
         carga.setTonelada(requestDTO.getTonelada());
         carga.setValorTonelada(requestDTO.getValorTonelada());
+
         return carga;
     }
 }

@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Repository
@@ -16,4 +17,7 @@ public interface CargaRepository extends JpaRepository <Carga,Long> {
 
     @Query("SELECT v FROM Carga v WHERE v.origem LIKE %:origem%")
     List<Carga> filtrarPorOrigem(@Param("origem") String origem);
+
+//    @Query("SELECT v FROM Carga v WHERE v.valorTotalFrete > :valor")
+//    List<Carga> findByValorTotalFreteMaiorQue(@Param("valor") BigDecimal valor);
 }
