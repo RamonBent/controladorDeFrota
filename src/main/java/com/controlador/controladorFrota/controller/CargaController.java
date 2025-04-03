@@ -45,4 +45,10 @@ public class CargaController {
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
+
+    @GetMapping("/filtrar-por-destino")
+    public ResponseEntity<List<Carga>> filtrarPorCarga(@RequestParam String destino) {
+        List<Carga> carga = cargaService.filtrarPorDestino(destino);
+        return ResponseEntity.ok(carga);
+    }
 }

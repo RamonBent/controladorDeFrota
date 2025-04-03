@@ -14,6 +14,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/veiculo")
+@CrossOrigin(origins = "http://localhost:5173")
 public class VeiculoController {
     @Autowired
     private VeiculoService veiculoService;
@@ -33,7 +34,7 @@ public class VeiculoController {
 
 
     //Sendo listada com filtro DTO
-    @GetMapping
+    @GetMapping("/lista")
     public List<VeiculoResponseDTO> getAllVeiculos() {
         return veiculoService.getAllVeiculos();
     }

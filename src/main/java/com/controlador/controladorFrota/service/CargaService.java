@@ -49,4 +49,8 @@ public class CargaService {
     public Optional<Carga> detalharCarga(Long id) {
         return cargaRepository.findById(id);
     }
+
+    public List<Carga> filtrarPorDestino(String destino) {
+        return cargaRepository.filtrarPorDestino(destino);
+    }
 }
