@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0780cb6c-a231-4479-b432-cd8a5538e738" name="Changes" comment="Filtrando carga por origem">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/ControladorFrotaApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/DTOs/mapper/CargaMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/DTOs/mapper/DespesasMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/DTOs/mapper/MotoristaMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/DTOs/mapper/VeiculoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/DTOs/mapper/ViagemMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/DTOs/request/CargaRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/DTOs/request/DespesasRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/DTOs/request/MotoristaRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/DTOs/request/VeiculoRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/DTOs/request/ViagemRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/DTOs/response/VeiculoResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/controller/CargaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/controller/DespesasController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/controller/MotoristaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/controller/VeiculoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/controller/ViagemController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/model/Carga.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/model/Despesas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/model/Motorista.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/model/Veiculo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/model/Viagem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/repositorys/CargaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/repositorys/DespesasRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/repositorys/MotoristaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/repositorys/VeiculoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/repositorys/ViagemRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/service/CargaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/service/DespesaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/service/MotoristaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/service/VeiculoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controlador/controladorFrota/service/ViagemService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/controlador/controladorFrota/ControladorFrotaApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/ControladorFrotaApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/DTOs/mapper/CargaMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/DTOs/mapper/DespesasMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/DTOs/mapper/MotoristaMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/DTOs/mapper/VeiculoMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/DTOs/mapper/ViagemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/DTOs/request/CargaRequestDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/DTOs/request/DespesasRequestDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/DTOs/request/MotoristaRequestDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/DTOs/request/VeiculoRequestDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/DTOs/request/ViagemRequestDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/DTOs/response/VeiculoResponseDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/config/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/controller/CargaController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/controller/DespesasController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/controller/MotoristaController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/controller/VeiculoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/controller/ViagemController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/model/Carga.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/model/Despesas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/model/Motorista.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/model/Veiculo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/model/Viagem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/repositorys/CargaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/repositorys/DespesasRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/repositorys/MotoristaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/repositorys/VeiculoRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/repositorys/ViagemRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/service/CargaService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/service/DespesaService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/service/MotoristaService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/service/VeiculoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controlador/controladorFrota/service/ViagemService.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2tUSDCR0B8xfaVyU1kVSwSLp0a6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ControladorFrotaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ramon/Documentos/Faculdade/Springboot/academia-api&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="ControladorFrotaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.controlador.controladorFrota.ControladorFrotaApplication" />
+      <module name="controladorFrota" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.controlador.controladorFrota.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ControladorFrotaApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0780cb6c-a231-4479-b432-cd8a5538e738" name="Changes" comment="" />
+      <created>1740405038727</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740405038727</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Implementando controller para carga">
+      <option name="closed" value="true" />
+      <created>1740407931740</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740407931740</updated>
+    </task>
+    <task id="LOCAL-00002" summary="att">
+      <option name="closed" value="true" />
+      <created>1740532363509</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740532363509</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Recebendo veiculo em carga">
+      <option name="closed" value="true" />
+      <created>1740579658363</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740579658363</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Criando Motorista">
+      <option name="closed" value="true" />
+      <created>1740751632900</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740751632900</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Criando Motorista">
+      <option name="closed" value="true" />
+      <created>1740755009468</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740755009468</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Excluindo desnecessarios">
+      <option name="closed" value="true" />
+      <created>1741097181052</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1741097181052</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Excluindo desnecessarios">
+      <option name="closed" value="true" />
+      <created>1741097319164</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1741097319164</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Adicionando despesas">
+      <option name="closed" value="true" />
+      <created>1741098170415</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1741098170415</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Adicionando despesas">
+      <option name="closed" value="true" />
+      <created>1741100495106</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1741100495106</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Adicionando despesas">
+      <option name="closed" value="true" />
+      <created>1741810741917</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1741810741917</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Adicionando controller">
+      <option name="closed" value="true" />
+      <created>1741906417217</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1741906417217</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Cruds criados">
+      <option name="closed" value="true" />
+      <created>1741907362685</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1741907362685</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Cruds criados">
+      <option name="closed" value="true" />
+      <created>1742254511401</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1742254511401</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Cruds criados">
+      <option name="closed" value="true" />
+      <created>1742254575611</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1742254575611</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Cruds criados">
+      <option name="closed" value="true" />
+      <created>1742254604859</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1742254604859</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Cruds criados">
+      <option name="closed" value="true" />
+      <created>1742254635195</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1742254635195</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Cruds criados">
+      <option name="closed" value="true" />
+      <created>1742432630486</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1742432630486</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Cruds criados">
+      <option name="closed" value="true" />
+      <created>1742432643044</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1742432643044</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Cruds criados">
+      <option name="closed" value="true" />
+      <created>1742432665664</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1742432665664</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Cruds criados">
+      <option name="closed" value="true" />
+      <created>1742432712250</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1742432712250</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Cruds criados">
+      <option name="closed" value="true" />
+      <created>1742432727334</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1742432727334</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Aplicando primeiro filtro">
+      <option name="closed" value="true" />
+      <created>1742590457674</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1742590457674</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Aplicando primeiro filtro">
+      <option name="closed" value="true" />
+      <created>1742590471761</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1742590471761</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Aplicando primeiro filtro">
+      <option name="closed" value="true" />
+      <created>1742590484364</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1742590484364</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Aplicando primeiro filtro">
+      <option name="closed" value="true" />
+      <created>1742590495557</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1742590495557</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Desvendando bugs">
+      <option name="closed" value="true" />
+      <created>1742660093274</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1742660093274</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Desvendando bugs">
+      <option name="closed" value="true" />
+      <created>1742660105163</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1742660105163</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Calculando valor de frete">
+      <option name="closed" value="true" />
+      <created>1742666491460</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1742666491460</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Adicionando filtro em motorista">
+      <option name="closed" value="true" />
+      <created>1743528342929</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1743528342929</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Calculando despesas">
+      <option name="closed" value="true" />
+      <created>1743529992092</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1743529992092</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Calculando despesas">
+      <option name="closed" value="true" />
+      <created>1743530008536</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1743530008536</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Filtrando por destino">
+      <option name="closed" value="true" />
+      <created>1743641576064</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1743641576064</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Filtrando carga por origem">
+      <option name="closed" value="true" />
+      <created>1743641823899</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1743641823899</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Filtrando carga por origem">
+      <option name="closed" value="true" />
+      <created>1743642795147</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1743642795147</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implementando controller para carga" />
+    <MESSAGE value="att" />
+    <MESSAGE value="Recebendo veiculo em carga" />
+    <MESSAGE value="Criando Motorista" />
+    <MESSAGE value="Excluindo desnecessarios" />
+    <MESSAGE value="Adicionando despesas" />
+    <MESSAGE value="Adicionando controller" />
+    <MESSAGE value="Cruds criados" />
+    <MESSAGE value="Aplicando primeiro filtro" />
+    <MESSAGE value="Desvendando bugs" />
+    <MESSAGE value="Calculando valor de frete" />
+    <MESSAGE value="Adicionando filtro em motorista" />
+    <MESSAGE value="Calculando despesas" />
+    <MESSAGE value="Filtrando por destino" />
+    <MESSAGE value="Filtrando carga por origem" />
+    <option name="LAST_COMMIT_MESSAGE" value="Filtrando carga por origem" />
+  </component>
+</project>

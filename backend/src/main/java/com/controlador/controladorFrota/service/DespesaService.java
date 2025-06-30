@@ -50,5 +50,4 @@ public class DespesaService {
                 .add(despesasRequestDTO.getOutros());
         return totalDespesa;
     }
-
 }
